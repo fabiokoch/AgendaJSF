@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title></title>
+</h:head>
+<h:body>
+	<h:form id="formEditar">
+		<p:growl></p:growl>
+		<p:focus for="nome" />
+		<p:panelGrid columns="2">
+			<f:facet name="header">
+				<p:outputLabel value="Edição de Contatos" />
+			</f:facet>
+			<p:outputLabel value="Código:" for="id" />
+			<p:inputText id="id" readonly="true" size="5"
+				value="#{contatoCrud.objeto.id}" />
+			<p:outputLabel value="Nome:" for="nome" />
+			<p:inputText id="nome" size="50" value="#{contatoCrud.objeto.nome}" />
+			<p:outputLabel value="Endereço:" for="endereco" />
+			<p:inputText id="endereco" size="50"
+				value="#{contatoCrud.objeto.endereco}" />
+			<p:outputLabel value="Telefone1:" for="telefone1" />
+			<p:inputText id="telefone1" size="50"
+				value="#{contatoCrud.objeto.telefone1}" />
+			<p:outputLabel value="Telefone2:" for="telefone2" />
+			<p:inputText id="telefone2" size="50"
+				value="#{contatoCrud.objeto.telefone2}" />
+			<p:outputLabel value="Celular:" for="celular" />
+			<p:inputMask id="celular" size="50" value="#{contatoCrud.objeto.celular}" mask="(99) 9999-9999"/>
+
+			<f:facet name="footer">
+				<p:commandButton value="Gravar" action="#{contatoCrud.gravar}"
+					ajax="false" />
+				<p:commandButton value="Cancelar" action="#{contatoCrud.cancelar}"
+					ajax="false" immediate="true" />
+			</f:facet>
+		</p:panelGrid>
+	</h:form>
+</h:body>
+</html>

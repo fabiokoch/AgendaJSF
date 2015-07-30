@@ -1,0 +1,11 @@
+/* Caixa de Diálogo */
+.ui-dialog {
+z-index: 11 !important;
+}
+.ui-dialog-titlebar-close {
+width: 22px;
+height: 22px;
+}
+.ui-dialog-titlebar-close span {
+margin: -10px -10px -10px -10px !important;
+}
